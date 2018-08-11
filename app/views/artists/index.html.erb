@@ -2,6 +2,7 @@
 
 <ul>
   <% @artists.each do |artist| %>
-    <li><%= link_to artist.name, article_path(artist) %></li>
+    <li><%= link_to artist.name, artist_path(artist) %></li>
+    <span>Song Count: <%= "#{artist.song_count}" + " songs" %></span>
   <% end %>
 </ul>
